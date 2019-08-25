@@ -77,6 +77,13 @@ const SAWU_Hookers = new Vue({
             }).catch((error) => { });
         },
 
+        CloseServiceMenu() {
+            axios.post(`http://${this.ResourceName}/CloseServiceMenu`, {}).then((response) => {
+                this.showHookersSelector    = false;
+                this.showPimpSelector       = false;
+            }).catch((error) => { });
+        },
+
 
     },
 });

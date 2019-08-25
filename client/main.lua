@@ -158,16 +158,13 @@ RegisterNUICallback("ChooseSex", function (data, callback)
     HookerInCar = false
     TriggerServerEvent("sawu_hookers:pay", false)
 end)
--------------------------------------------------------------
 
--------------------------------------------------------------
--- No money, tell hooker to go home
-------------------------------------------------------------- 
-RegisterNetEvent("sawu_hookers:gohome")
-AddEventHandler("sawu_hookers:gohome", function()
-    hookerGoHome()
+RegisterNUICallback("CloseServiceMenu", function (data, callback)
+    SetNuiFocus(false, false)
+    callback("ok")
+    HookerInCar = true
 end)
-------------------------------------------------------------- 
+-------------------------------------------------------------
 
 -------------------------------------------------------------
 -- Blowjob Animation and Speech
