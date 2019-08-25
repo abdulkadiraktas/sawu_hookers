@@ -31,6 +31,12 @@ AddEventHandler('sawu_hookers:pay', function(boolean)
             xPlayer.removeMoney(Config.BlowjobPrice)
             TriggerClientEvent('sawu_hookers:startBlowjob', _source)
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = 'You payed: ' .. Config.BlowjobPrice ..' $' })
+            -- this adds money to society_nightclub
+            if Config.SocietyNightclub then
+                TriggerEvent('esx_addonaccount:getSharedAccount', 'society_nightclub', function(account)
+                    account.addMoney(Config.BlowjobPrice)
+                end)
+            end
         else
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = 'You do not have enough money' })
             TriggerClientEvent('sawu_hookers:noMoney', _source)
@@ -40,6 +46,12 @@ AddEventHandler('sawu_hookers:pay', function(boolean)
             xPlayer.removeMoney(Config.SexPrice)
             TriggerClientEvent('sawu_hookers:startSex', _source)
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = 'You payed: ' .. Config.SexPrice ..' $' })
+            -- this adds money to society_nightclub
+            if Config.SocietyNightclub then
+                TriggerEvent('esx_addonaccount:getSharedAccount', 'society_nightclub', function(account)
+                    account.addMoney(Config.SexPrice)
+                end)
+            end
         else
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = 'You do not have enough money' })
             TriggerClientEvent('sawu_hookers:noMoney', _source)
