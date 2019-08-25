@@ -33,6 +33,7 @@ AddEventHandler('sawu_hookers:pay', function(boolean)
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = 'You payed: ' .. Config.BlowjobPrice ..' $' })
         else
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = 'You do not have enough money' })
+            TriggerClientEvent('sawu_hookers:gohome', _source)
         end  
     else
         if xPlayer.getMoney() >= Config.SexPrice then
@@ -41,6 +42,7 @@ AddEventHandler('sawu_hookers:pay', function(boolean)
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'inform', text = 'You payed: ' .. Config.SexPrice ..' $' })
         else
             TriggerClientEvent('mythic_notify:client:SendAlert', _source, { type = 'error', text = 'You do not have enough money' })
+            TriggerClientEvent('sawu_hookers:gohome', _source)
         end 
     end
 end)

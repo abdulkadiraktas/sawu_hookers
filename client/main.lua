@@ -161,6 +161,15 @@ end)
 -------------------------------------------------------------
 
 -------------------------------------------------------------
+-- No money, tell hooker to go home
+------------------------------------------------------------- 
+RegisterNetEvent("sawu_hookers:gohome")
+AddEventHandler("sawu_hookers:gohome", function()
+    hookerGoHome()
+end)
+------------------------------------------------------------- 
+
+-------------------------------------------------------------
 -- Blowjob Animation and Speech
 -------------------------------------------------------------  
 RegisterNetEvent("sawu_hookers:startBlowjob")
@@ -187,6 +196,7 @@ AddEventHandler("sawu_hookers:startBlowjob", function()
     PlayAmbientSpeech1(Hooker, "Hooker_Offer_Again", "Speech_Params_Force_Shouted_Clear")
     HookerInCar = true
 end)
+------------------------------------------------------------- 
 
 -------------------------------------------------------------
 -- Sex Animation and Speech
@@ -215,6 +225,7 @@ AddEventHandler("sawu_hookers:startSex", function()
     PlayAmbientSpeech1(Hooker, "Hooker_Offer_Again", "Speech_Params_Force_Shouted_Clear")
     HookerInCar = true
 end)
+------------------------------------------------------------- 
 
 -------------------------------------------------------------
 -- DrawText Function
