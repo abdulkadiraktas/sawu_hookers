@@ -4,6 +4,8 @@ There you can open a menu where you can select the hooker you want. rofl
 
 From there you have to drive and pick up the hooker at the location marked on you GPS.
 
+Do not reupload without my permission.
+
 ## Dependencies
 - [Mythic Notifications](https://forum.fivem.net/t/dev-resource-mythic-notifications/587071)
 
