@@ -32,3 +32,7 @@ files {
 	'ui/img/blowjob.png',
 	'ui/img/sex.png',
 }
+
+dependencies {
+    'mythic_notify',
+}
