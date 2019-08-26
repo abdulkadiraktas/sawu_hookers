@@ -68,7 +68,7 @@ Citizen.CreateThread(function ()
         for k,v in pairs(Config.Zones) do
             if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < Config.DrawDistance and k == 'Pezevenk' then
                 letSleep = false
-                DrawText3Ds(v.Pos.x, v.Pos.y, v.Pos.z+1.0, "~b~[E]~w~ Bana oradan bişiler ayarla")
+                DrawText3Ds(v.Pos.x, v.Pos.y, v.Pos.z+1.0, "~b~[E]~w~ Bana oradan bisiler ayarla")
                 if IsControlJustReleased(0, Keys['E']) then
                     TriggerEvent("sawu_hookers:OpenPimpMenu")
                 end
@@ -309,7 +309,7 @@ AddEventHandler("sawu_hookers:ChosenHooker", function(model)
                         local ped = GetPlayerPed(PlayerId())
                         local vehicle = GetVehiclePedIsIn(ped, false)
                         if GetPedInVehicleSeat(vehicle, -1) and IsPedInVehicle(ped, vehicle, true) and IsVehicleSeatFree(vehicle, 0) and not IsVehicleSeatFree(vehicle, -1) then
-                            DrawText3Ds(Config.Hookerspawns[spawn].x,Config.Hookerspawns[spawn].y,Config.Hookerspawns[spawn].z+1.0, '[~b~E~w~] Fahişeyi araca çağır.')
+                            DrawText3Ds(Config.Hookerspawns[spawn].x,Config.Hookerspawns[spawn].y,Config.Hookerspawns[spawn].z+1.0, '[~b~E~w~] Fahiseyi araca çagır.')
                             if IsControlJustPressed(0, Keys["E"]) then
                                 RemoveBlip(HookerBlip)
                                 signalHooker()
@@ -327,7 +327,7 @@ AddEventHandler("sawu_hookers:ChosenHooker", function(model)
                         letSleep = false
                         local ped = GetPlayerPed(PlayerId())
                         if IsVehicleStopped(vehicle) then
-                            DrawText3Ds(Coords.x, Coords.y, Coords.z+1.0, 'Servisleri seçmek için[~b~E~w~], fahişenin ayrılmasını istiyorsan [~r~H~w~] tuşuna bas. ')
+                            DrawText3Ds(Coords.x, Coords.y, Coords.z+1.0, 'Servisleri seçmek için[~b~E~w~], fahisenin ayrılmasını istiyorsan [~r~H~w~] tusuna bas. ')
                             if IsControlJustPressed(0, Keys["E"]) then
                                 PlayAmbientSpeech1(Hooker, "Hooker_Offer_Service", "Speech_Params_Force_Shouted_Clear")
                                 TriggerEvent("sawu_hookers:OpenHookerMenu")
