@@ -6,17 +6,17 @@ const SAWU_Hookers = new Vue({
         ResourceName: "SAWU_Hookers",
         showHookersSelector: false,
         showPimpSelector: false,
+        blowjob: null,
+        sex: null,
 
     },
 
     methods: {
 
         // START OF MAIN MENU
-        OpenPimpMenu(blowjob, sex) {
+        OpenPimpMenu() {
             this.showPimpSelector       = true;
             this.showHookersSelector    = false;
-            this.blowjob                = blowjob;
-            this.sex                    = sex;
 
         },
 
