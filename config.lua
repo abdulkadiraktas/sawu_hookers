@@ -1,5 +1,5 @@
 Config              		= {}
-Config.DrawDistance         = 3.0
+Config.DrawDistance         = 3.1
 Config.DrawMarker         	= 10.0
 Config.BlowjobPrice			= 100  	-- Change price for blowjob here
 Config.SexPrice				= 400  	-- Change price for sex here
